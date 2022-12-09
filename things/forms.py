@@ -7,10 +7,15 @@ from .models import Thing
 
 class ThingForm(forms.ModelForm):
     # name = forms.CharField(label="Name",max_length=35)
-    description =forms.Textarea()
+
     # quantity = forms.IntegerField(label ="Quantity",validators=[MinValueValidator(0),MaxValueValidator(50)])
 
 
     class Meta:
         model = Thing
         fields = ['name', 'description', 'quantity']
+    widgets = {
+            'description' : forms.Textarea(attrs={
+                'maxlength': '120',
+            }),
+        }
