@@ -6,9 +6,9 @@ from .models import Thing
 # Create your forms here.
 
 class ThingForm(forms.ModelForm):
-    name = forms.CharField(label="Name",max_length=35)
-    description =forms.CharField(label="Description",max_length=120)
-    quantity = forms.IntegerField(label ="Quantity",validators=[MinValueValidator(0),MaxValueValidator(50)])
+    # name = forms.CharField(label="Name",max_length=35)
+    # description =forms.CharField(label="Description",max_length=120)
+    # quantity = forms.IntegerField(label ="Quantity",validators=[MinValueValidator(0),MaxValueValidator(50)])
 
 
     class Meta:
